@@ -1,0 +1,73 @@
+---
+- hosts: 156.56.93.89
+  remote_user: admin
+
+  tasks:
+  
+  - name: Install item set 1
+    apt: name={{item}} state=installed
+    become: yes
+    with_items:
+      - build-essential
+      - autoconf
+      - libtool
+      - pkg-config
+
+  - name: Install item set 2
+    apt: name={{item}} state=installed
+    become: yes
+    with_items:
+      - libtiff5-dev
+      - libjpeg8-dev
+      - zlib1g-dev
+      - libfreetype6-dev
+      - liblcms2-dev
+      - libwebp-dev
+
+  - name: Install item set 3
+    apt: name={{item}} state=installed
+    become: yes
+    with_items:
+      - libffi-dev
+      - libssl-dev
+      - libsqlite3-dev
+      
+  - name: Install git, mercurial
+    apt: name={{item}} state=installed
+    become: yes
+    with_items:
+      - git
+      - mercurial
+
+  - name: Install Editors
+    apt: name={{item}} state=installed
+    become: yes
+    with_items:
+      - emacs
+      - vim
+      
+  - name: Install pip
+    apt: name=python-pip state=installed 
+    become: yes
+
+  - name: Install python
+    apt: name={{ item }} state=installed
+    become: yes
+    with_items:
+      - python-dev
+      - python-opengl
+      - python-imaging
+      - python-pyrex
+
+  - name: Install jupyter
+    pip: name=jupyter
+    become: yes
+
+  #- include: tasks/pycharm.yml
+
+  - name: Install cloudmesh_client
+    pip: name=cloudmesh_client
+    become: yes
+ 
+
+ 

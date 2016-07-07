@@ -1,0 +1,30 @@
+#tasks file for pycharm
+---
+- name: Install and unpack pycharm
+  hosts: localhost
+  become: yes
+  become_user: root
+  become_method: sudo
+
+
+  vars:
+
+     downloads_path: /usr/local/share
+     pycharm_version: 2016.1.4
+     install_path: /usr/local/share
+
+  tasks:
+
+# https://download.jetbrains.com/python/pycharm-community-2016.1.4.tar.gz
+
+  - name: PyCharm download
+    get_url:
+      url: "http://download.jetbrains.com/python/pycharm-community-{{ pycharm_version }}.tar.gz"
+      dest: "{{ downloads_path }}/pycharm-community-{{ pycharm_version }}.tar.gz"
+
+  - name: PyCharm untar
+    unarchive:
+      src: "{{ downloads_path }}/pycharm-community-{{ pycharm_version }}.tar.gz"
+      dest: "{{ install_path }}"
+      creates: "{{ install_path }}/pycharm-{{ pycharm_version }}"
+      copy: false
