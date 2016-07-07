@@ -1,7 +1,13 @@
-Role Name
+Ubuntu xenial development environment setup
 =========
 
-A brief description of the role goes here.
+this is a role for setting up a development environment on ubuntu xenial. this role installs the following items
+
+    1. pycharm
+    2. ...
+    3. ...
+    4. ...
+    5. ...
 
 Requirements
 ------------
