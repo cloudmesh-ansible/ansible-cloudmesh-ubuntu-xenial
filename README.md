@@ -4,10 +4,14 @@ Ubuntu xenial development environment setup
 this is a role for setting up a development environment on ubuntu xenial. this role installs the following items
 
     1. pycharm
-    2. ...
-    3. ...
-    4. ...
-    5. ...
+    2. git
+    3. mercurial
+    4. emacs
+    5. vim
+    6. pip
+    7. python
+    8. jupyter
+    9. dependencies
 
 todo
 ----
