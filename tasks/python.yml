@@ -1,5 +1,5 @@
 ---
-- hosts: 156.56.93.89
+- hosts: localhost
   remote_user: admin
 
   tasks:
