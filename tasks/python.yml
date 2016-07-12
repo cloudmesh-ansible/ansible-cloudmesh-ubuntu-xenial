@@ -4,7 +4,7 @@
 
   tasks:
   
-  - name: Install item set 1
+  - name: Install development tools
     apt: name={{item}} state=installed
     become: yes
     with_items:
@@ -13,7 +13,7 @@
       - libtool
       - pkg-config
 
-  - name: Install item set 2
+  - name: Install common graphics and web libraries
     apt: name={{item}} state=installed
     become: yes
     with_items:
@@ -24,7 +24,7 @@
       - liblcms2-dev
       - libwebp-dev
 
-  - name: Install item set 3
+  - name: Install ffi, ssl, sqlite
     apt: name={{item}} state=installed
     become: yes
     with_items:
