@@ -76,5 +76,5 @@ Apache
 Author Information
 ------------------
 
-Gregor von Laszewski (laszewski@gmail.com) (Contact)
-Hagen Hodkins
+* Gregor von Laszewski (laszewski@gmail.com) (Contact)
+* Hagen Hodkins
