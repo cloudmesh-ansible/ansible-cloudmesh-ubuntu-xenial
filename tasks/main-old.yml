@@ -1,0 +1,56 @@
+---
+- name: Install development tools
+  action: apt pkg={{item}} state=installed
+  with_items:
+  - build-essential
+  - autoconf
+  - libtool
+  - pkg-config
+
+- name: Install common graphics and web libraries
+  action: apt pkg={{item}} state=installed
+  with_items:
+  - libtiff5-dev
+  - libjpeg8-dev
+  - zlib1g-dev
+  - libfreetype6-dev
+  - liblcms2-dev
+  - libwebp-dev
+
+- name: Install ffi, ssl, sqlite
+  action: apt pkg={{item}} state=installed
+  with_items:
+  - libffi-dev
+  - libssl-dev
+  - libsqlite3-dev
+      
+- name: Install git, mercurial
+  action: apt pkg={{item}} state=installed
+  with_items:
+  - git
+  - mercurial
+
+- name: Install Editors
+  action: apt pkg={{item}} state=installed
+  with_items:
+  - emacs
+  - vim
+      
+- name: Install pip
+  action: apt pkg={{item}} state=installed
+
+- name: Install python
+  action: apt pkg={{item}} state=installed
+  with_items:
+  - python-dev
+  - python-opengl
+  - python-imaging
+  - python-pyrex
+
+- name: Install jupyter
+  pip: name=jupyter
+
+#- include: tasks/pycharm.yml
+
+- name: Install cloudmesh_client
+  pip: name=cloudmesh_client
