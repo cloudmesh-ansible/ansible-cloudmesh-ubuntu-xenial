@@ -1,6 +1,7 @@
 ---
 - name: Install development tools
   apt: name={{item}} state=installed
+  become: yes
   with_items:
   - build-essential
   - autoconf
