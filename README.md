@@ -26,7 +26,7 @@ note :  ansible-playbook -i 'localhost ansible_connection=local,' /path/to/playb
 
 1. Connect to or otherwise access the machine you wish to setup the development environment on. In the case of using a cloudmesh launched virtual machine you can use the following commands::
 
-    $ cm vm ssh 'machinename'
+            $ cm vm ssh 'machinename'
     
 2. It is assumed that this is a new machine and thus does not have ansible installed. Ansible is required for the role to run as it is an ansible-galaxy role. andsible can be installed by the user via the following command if it not already present on the machine::
 
