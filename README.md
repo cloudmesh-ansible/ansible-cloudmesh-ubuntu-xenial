@@ -38,7 +38,7 @@ note :  ansible-playbook -i 'localhost ansible_connection=local,' /path/to/playb
 
 If you wish to install the role to a specific directory it can be done using a command such as this::
 
-        $ ansible-galaxy install username.rolename --roles-path=~/directory/of/your/choosing/
+    $ ansible-galaxy install username.rolename --roles-path=~/directory/of/your/choosing/
     
 4. Now that the role has been installed on your machine it is time to deploy it. This can be done using the main.yml file located in the tasks directory of the role. It can be deployed by navigating to the tasks directory and using the following command::
 
