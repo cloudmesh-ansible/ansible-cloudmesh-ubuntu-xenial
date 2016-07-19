@@ -16,11 +16,11 @@ this is a role for setting up a development environment on ubuntu xenial. this r
 Instructions
 ------------
 
-1. connect to or otherwise access the machine you wish to setup the development environment on. In the case of using a cloudmesh launched virtual machine you can use the following commands::
+connect to or otherwise access the machine you wish to setup the development environment on. In the case of using a cloudmesh launched virtual machine you can use the following commands::
 
     $ cm vm ssh 'machinename'
     
-2. once connected you will need to install this role onto the chosen machine. this can be done using the following::
+once connected you will need to install this role onto the chosen machine. this can be done using the following::
 
     $ ansible-galaxy install username.rolename
 
