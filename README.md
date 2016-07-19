@@ -15,6 +15,11 @@ the following items
     9. jupyter
     10. dependencies
     
+Status
+------
+
+This role is work in progress. It is already usable and if you find missing features and components, let us know and we try to add them if possible. 
+
 Instructions
 ------------
 
