@@ -16,20 +16,35 @@ this is a role for setting up a development environment on ubuntu xenial. this r
 Instructions
 ------------
 
-connect to or otherwise access the machine you wish to setup the development environment on. In the case of using a cloudmesh launched virtual machine you can use the following commands::
+1 - connect to or otherwise access the machine you wish to setup the development environment on. In the case of using a cloudmesh launched virtual machine you can use the following commands::
 
     $ cm vm ssh 'machinename'
     
-once connected you will need to install this role onto the chosen machine. this can be done using the following::
+2 - It is assumed that this is a new machine and thus does not have ansible installed. Ansible is required for the role to run as it is an ansible-galaxy role. andsible can be installed by the user via the following command if it not already present on the machine::
+
+    $ sudo apt-get install ansible
+    
+3 - Once connected you will need to install this role onto the chosen machine. this can be done using the following::
 
     $ ansible-galaxy install username.rolename
 
-3. the role should now be 
+If you wish to install the role to a specific directory it can be done using a command such as this::
 
-todo
-----
+    $ ansible-galaxy install username.rolename --roles-path=~/directory/of/your/choosing/
+    
+4 - Now that the role has been installed on your machine it is time to deploy it. This can be done using the main.yml file located in the tasks directory of the role. It can be deployed by navigating to the tasks directory and using the following command::
 
-unjumble the tasks files and make them into one file.
+    $ ansible-playbook main.yml
+    
+The role can otherwise be deployed from afar by providing the directory in the launch command as such::
+
+    $ ansible-playbook ~/directoryofyourchoosing/ansible-cloudmesh-ubuntu-xenial/tasks/main.yml
+    
+the role sould now begin to set up your python development environment. If this is not the case,  please submit an issue ticket to the to the github repository detailing the issue you encountered::
+
+    https://github.com/cloudmesh/ansible-cloudmesh-ubuntu-xenial
+
+    
 
 Requirements
 ------------
