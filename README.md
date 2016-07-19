@@ -22,6 +22,7 @@ This role is work in progress. It is already usable and if you find missing feat
 
 Instructions
 ------------
+note :  ansible-playbook -i 'localhost ansible_connection=local,' /path/to/playbook.yml 
 
 1. Connect to or otherwise access the machine you wish to setup the development environment on. In the case of using a cloudmesh launched virtual machine you can use the following commands::
 
