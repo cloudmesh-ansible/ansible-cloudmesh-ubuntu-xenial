@@ -27,25 +27,17 @@ Next you login into it and install pip if you have not yet done so with:
   
 Next you install ansible with
 
-    $ sudo pip install ansible
+    $ sudo apt-get install ansible -y
    
+Next you install the role with
+
+    $ ansible-galaxy install cloudmesh.ansible-cloudmesh-ubuntu-xenial
 
 NOT COMPLETED
 -------------
 
 
-2. It is assumed that this is a new machine and thus does not have ansible installed. Ansible is required for the role to run as it is an ansible-galaxy role. andsible can be installed by the user via the following command if it not already present on the machine::
 
-        $ sudo apt-get install ansible
-    
-3. Once connected you will need to install this role onto the chosen machine. this can be done using the following::
-
-        $ ansible-galaxy install username.rolename
-
-If you wish to install the role to a specific directory it can be done using a command such as this::
-
-    $ ansible-galaxy install username.rolename --roles-path=~/directory/of/your/choosing/
-    
 4. Now that the role has been installed on your machine it is time to deploy it. This can be done using the main.yml file located in the tasks directory of the role. It can be deployed by navigating to the tasks directory and using the following command::
 
         $ ansible-playbook main.yml
