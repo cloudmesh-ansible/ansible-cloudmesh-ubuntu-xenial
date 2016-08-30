@@ -15,19 +15,25 @@ the following items
     9. jupyter
     10. dependencies
     
-Status
-------
-
-This role is work in progress. It is already usable and if you find missing features and components, let us know and we try to add them if possible. 
 
 Instructions
 ------------
-note :  ansible-playbook -i 'localhost ansible_connection=local,' /path/to/playbook.yml 
 
-1. Connect to or otherwise access the machine you wish to setup the development environment on. In the case of using a cloudmesh launched virtual machine you can use the following commands::
+First we assume you have started a vanilla ubuntu xenial desktop release. The version number is 16.??
 
-        $ cm vm ssh 'machinename'
-    
+Next you login into it and install pip if you have not yet done so with:
+
+  sudo easy_install pip 
+  
+Next you install ansible with
+
+  sudo pip install ansible
+   
+
+NOT COMPLETED
+-------------
+
+
 2. It is assumed that this is a new machine and thus does not have ansible installed. Ansible is required for the role to run as it is an ansible-galaxy role. andsible can be installed by the user via the following command if it not already present on the machine::
 
         $ sudo apt-get install ansible
