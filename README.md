@@ -23,11 +23,11 @@ First we assume you have started a vanilla ubuntu xenial desktop release. The ve
 
 Next you login into it and install pip if you have not yet done so with:
 
-  sudo easy_install pip 
+    $ sudo easy_install pip 
   
 Next you install ansible with
 
-  sudo pip install ansible
+    $ sudo pip install ansible
    
 
 NOT COMPLETED
