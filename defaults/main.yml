@@ -2,6 +2,19 @@
 
 install_pycharm: yes
 
+install_tex_extras: yes
+
+tex_extras_path: "{{ ansible_env.HOME }}/texmf"
+
+tex_extras_paths:
+  cls: "{{ tex_extras_path }}/tex/latex/base"
+  sty: "{{ tex_extras_path }}/tex/latex"
+
+tex_extras:
+  - ext: cls
+    url: "https://www.acm.org/binaries/content/assets/publications/article-templates/sig-alternate-05-2015.cls"
+  - ext: sty
+    url: "https://www.acm.org/binaries/content/assets/publications/article-templates/acmcopyright.sty"
 
 cache_valid_time: 3600
 

@@ -25,3 +25,7 @@
 
 - include: pycharm.yml
   when: install_pycharm
+
+
+- include: tex-extras.yml
+  when: install_tex_extras
