@@ -29,6 +29,7 @@ packages_databases:
 packages_editors:
   - emacs
   - vim
+  - lyx
 
 packages_pythondev:
   - python-setuptools
