@@ -1,2 +1,38 @@
 ---
-# defaults file for ansible-cloudmesh-xenial
+
+packages_devtools:
+  - build-essential
+  - autoconf
+  - libtool
+  - pkg-config
+  - git
+  - mercurial
+
+packages_devlibs:
+  - libffi-dev
+  - libssl-dev
+  - libtiff5-dev
+  - libjpeg8-dev
+  - zlib1g-dev
+  - libfreetype6-dev
+  - liblcms2-dev
+  - libwebp-dev
+
+packages_databases:
+  - sqlite3
+  - libsqlite3-dev
+
+packages_editors:
+  - emacs
+  - vim
+
+packages_pythondev:
+  - python-pip
+  - python-dev
+  - python-opengl
+  - python-imaging
+  - python-pyrex
+
+python_packages:
+  - jupyter
+  - cloudmesh_client
