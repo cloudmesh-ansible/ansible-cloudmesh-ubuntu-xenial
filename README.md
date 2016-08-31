@@ -19,7 +19,7 @@ the following items
 Instructions
 ------------
 
-First we assume you have started a vanilla ubuntu xenial desktop release. The version number is 16.??
+First we assume you have started a vanilla ubuntu xenial (16.04) desktop release.
 
 Next you login into it and install pip if you have not yet done so with:
 
