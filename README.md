@@ -23,7 +23,7 @@ First we assume you have started a vanilla ubuntu xenial (16.04) desktop release
 
 Next, you need to download the bootstrapping script:
 
-    $ wget https://raw.githubusercontent.com/cloudmesh/ansible-cloudmesh-ubuntu-xenial/dev/bootstrap.sh
+    $ wget https://raw.githubusercontent.com/cloudmesh/ansible-cloudmesh-ubuntu-xenial/master/bootstrap.sh
   
 Finally, execute the bootstrapping script:
 
