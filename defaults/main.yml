@@ -10,6 +10,8 @@ tex_extras_paths:
   cls: "{{ tex_extras_path }}/tex/latex/base"
   sty: "{{ tex_extras_path }}/tex/latex"
 
+# The 'ext' values are mapped to the keys of the 'tex_extras_paths'
+# variable (above) in the corresponding tasks
 tex_extras:
   - ext: cls
     url: "https://www.acm.org/binaries/content/assets/publications/article-templates/sig-alternate-05-2015.cls"
