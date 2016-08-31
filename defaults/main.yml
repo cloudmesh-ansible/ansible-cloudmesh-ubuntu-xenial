@@ -33,6 +33,7 @@ packages_pythondev:
   - python-dev
   - python-opengl
   - python-imaging
+  - virtualenv
   - python-pyrex
 
 python_packages:
