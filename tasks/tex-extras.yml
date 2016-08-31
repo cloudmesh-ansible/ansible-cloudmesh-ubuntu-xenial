@@ -1,0 +1,19 @@
+---
+
+############################################################ styles
+
+
+- name: Ensure install prefix exists
+  file:
+    path: "{{ item.value }}"
+    state: directory
+  with_dict: "{{ tex_extras_paths }}"
+
+- name: Download & install
+  get_url:
+    url: "{{ item.url }}"
+    dest: "{{ tex_extras_paths[item.ext] }}"
+  with_items: "{{ tex_extras }}"
+
+- name: Update index
+  shell: texhash "{{ tex_extras_path }}"

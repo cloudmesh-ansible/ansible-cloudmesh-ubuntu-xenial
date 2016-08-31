@@ -19,19 +19,21 @@ the following items
 Instructions
 ------------
 
-First we assume you have started a vanilla ubuntu xenial desktop release. The version number is 16.??
+First we assume you have started a vanilla ubuntu xenial (16.04) desktop release.
 
-Next you login into it and install pip if you have not yet done so with:
+Next, you need to download the bootstrapping script:
 
-    $ sudo apt install python-pip -y
+    $ wget https://raw.githubusercontent.com/cloudmesh/ansible-cloudmesh-ubuntu-xenial/master/bootstrap.sh
   
-Next you install ansible with
+Finally, execute the bootstrapping script:
 
-    $ sudo apt-get install ansible -y
+    $ bash bootstrap.sh
    
-Next you install the role with
+NOTE: if you want to test using the development branch, download `https://raw.githubusercontent.com/cloudmesh/ansible-cloudmesh-ubuntu-xenial/dev/bootstrap.sh` and run with:
 
-    $ ansible-galaxy install cloudmesh.ansible-cloudmesh-ubuntu-xenial
+    $ TESTING=true bash bootstrap.sh
+
+
 
 NOT COMPLETED
 -------------

@@ -1,2 +1,70 @@
 ---
-# defaults file for ansible-cloudmesh-xenial
+
+install_pycharm: yes
+
+install_tex_extras: yes
+
+tex_extras_path: "{{ ansible_env.HOME }}/texmf"
+
+tex_extras_paths:
+  cls: "{{ tex_extras_path }}/tex/latex/base"
+  sty: "{{ tex_extras_path }}/tex/latex"
+
+# The 'ext' values are mapped to the keys of the 'tex_extras_paths'
+# variable (above) in the corresponding tasks
+tex_extras:
+  - ext: cls
+    url: "https://www.acm.org/binaries/content/assets/publications/article-templates/sig-alternate-05-2015.cls"
+  - ext: sty
+    url: "https://www.acm.org/binaries/content/assets/publications/article-templates/acmcopyright.sty"
+
+cache_valid_time: 3600
+
+venv_path: "{{ ansible_env.HOME }}/ENV"
+
+pycharm_ppa: "ppa:mystic-mirage/pycharm"
+
+packages_devtools:
+  - build-essential
+  - autoconf
+  - libtool
+  - pkg-config
+  - git
+  - mercurial
+
+packages_devlibs:
+  - libffi-dev
+  - libssl-dev
+  - libtiff5-dev
+  - libjpeg8-dev
+  - zlib1g-dev
+  - libfreetype6-dev
+  - liblcms2-dev
+  - libwebp-dev
+
+packages_databases:
+  - sqlite3
+  - libsqlite3-dev
+
+packages_editors:
+  - emacs
+  - vim
+  - lyx
+
+packages_latex:
+  - jabref
+  - texlive
+
+packages_pythondev:
+  - python-setuptools
+  - python-pip
+  - virtualenv
+  - python-dev
+  - python-opengl
+  - python-imaging
+  - python-pyrex
+
+python_packages:
+  - jupyter
+  - cloudmesh_client
+
