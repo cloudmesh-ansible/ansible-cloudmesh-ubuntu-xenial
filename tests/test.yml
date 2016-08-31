@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
-  remote_user: root
+- hosts: all
+  remote_user: cc
   roles:
-    - ansible-cloudmesh-xenial
+    - local-role

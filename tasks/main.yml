@@ -15,8 +15,10 @@
     - "{{ packages_pythondev }}"
 
 - name: Install packages from pip
-  become: yes
   pip:
     name: "{{ item }}"
     state: present
+    virtualenv: "{{ venv_path }}"
   with_items: "{{ python_packages }}"
+
+
