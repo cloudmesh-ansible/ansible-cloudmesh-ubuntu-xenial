@@ -5,6 +5,8 @@
   apt:
     name: "{{ item }}"
     state: present
+    update_cache: yes
+    cache_valid_time: "{{ cache_valid_time }}"
   with_flattened:
     - "{{ packages_devtools }}"
     - "{{ packages_devlibs }}"
