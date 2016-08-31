@@ -13,10 +13,8 @@ cleanup() {
 trap cleanup SIGINT SIGTERM EXIT
 
 
-sudo apt install -y git python-{setuptools,pip} virtualenv
-virtualenv venv
-source venv/bin/activate
-pip install ansible
+sudo apt update
+sudo apt install -y git ansible
 git clone git://github.com/cloudmesh/ansible-cloudmesh-ubuntu-xenial
 cd ansible-cloudmesh-ubuntu-xenial/tests
 
