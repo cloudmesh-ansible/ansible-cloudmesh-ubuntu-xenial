@@ -12,6 +12,7 @@
     - "{{ packages_devlibs }}"
     - "{{ packages_databases }}"
     - "{{ packages_editors }}"
+    - "{{ packages_latex }}"
     - "{{ packages_pythondev }}"
 
 - name: Install packages from pip

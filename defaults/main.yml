@@ -31,6 +31,10 @@ packages_editors:
   - vim
   - lyx
 
+packages_latex:
+  - jabref
+  - texlive
+
 packages_pythondev:
   - python-setuptools
   - python-pip
