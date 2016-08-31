@@ -2,6 +2,8 @@
 
 cache_valid_time: 3600
 
+venv_path: "{{ ansible_env.HOME }}/ENV"
+
 packages_devtools:
   - build-essential
   - autoconf
@@ -29,13 +31,15 @@ packages_editors:
   - vim
 
 packages_pythondev:
+  - python-setuptools
   - python-pip
+  - virtualenv
   - python-dev
   - python-opengl
   - python-imaging
-  - virtualenv
   - python-pyrex
 
 python_packages:
   - jupyter
   - cloudmesh_client
+
