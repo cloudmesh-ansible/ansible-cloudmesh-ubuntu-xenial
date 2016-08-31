@@ -23,3 +23,5 @@
   with_items: "{{ python_packages }}"
 
 
+- include: pycharm.yml
+  when: install_pycharm

@@ -1,8 +1,13 @@
 ---
 
+install_pycharm: yes
+
+
 cache_valid_time: 3600
 
 venv_path: "{{ ansible_env.HOME }}/ENV"
+
+pycharm_ppa: "ppa:mystic-mirage/pycharm"
 
 packages_devtools:
   - build-essential
