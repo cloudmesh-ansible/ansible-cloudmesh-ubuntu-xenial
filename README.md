@@ -30,7 +30,15 @@ Finally, execute the bootstrapping script:
 
     $ bash bootstrap.sh
    
-NOTE: if you want to test using the development branch, download `https://raw.githubusercontent.com/cloudmesh/ansible-cloudmesh-ubuntu-xenial/dev/bootstrap.sh` and run with:
+
+Testing
+-------
+
+
+If you want to test using the development branch:
+
+1. download `https://raw.githubusercontent.com/cloudmesh/ansible-cloudmesh-ubuntu-xenial/dev/bootstrap.sh`
+1. Set `TESTING=true` before running, eg:
 
     $ TESTING=true bash bootstrap.sh
 
