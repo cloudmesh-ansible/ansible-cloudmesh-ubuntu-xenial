@@ -13,7 +13,8 @@ the following items
     7. pip
     8. python
     9. jupyter
-    10. dependencies
+    10. latex
+    11. dependencies
     
 
 Instructions
