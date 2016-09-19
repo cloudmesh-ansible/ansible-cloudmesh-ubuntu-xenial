@@ -8,5 +8,5 @@
 - name: Install PyCharm
   become: yes
   apt:
-    name: pycharm
+    name: pycharm-community
     state: installed
